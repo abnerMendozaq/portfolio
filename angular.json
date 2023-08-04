@@ -20,19 +20,22 @@
             "outputPath": "dist/portfolio",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/vendors/themify-icons/css/themify-icons.css",
+              "src/assets/css/johndoe.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/vendors/jquery/jquery-3.4.1.js",
+              "src/assets/vendors/bootstrap/bootstrap.bundle.js",
+              "src/assets/vendors/bootstrap/bootstrap.affix.js",
+              "src/assets/vendors/isotope/isotope.pkgd.js",
+              "src/assets/js/johndoe.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -82,19 +85,11 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }
